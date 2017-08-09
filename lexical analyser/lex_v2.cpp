@@ -21,16 +21,13 @@ int main(){
 		ch=fin.get();
 		map <char,int>:: iterator it;
 		it = m.find(ch);
-		if(ch=='"')
-		{
+		if(ch=='"'){
 			tempstr[commacounter] = ch;
 			commacounter++;
-			if(!startOfComma)
-			{
+			if(!startOfComma){
 				startOfComma = true;
 			}
-			else
-			{
+			else{
 				tempstr[commacounter] = '\0';
 				commacounter=0;		startOfComma = false;
 				cout<<'['<<tempstr<<']';
@@ -47,8 +44,7 @@ int main(){
 			temp[counter] = ch;
 			counter++;
 		}
-		else if(startOfComma)
-		{
+		else if(startOfComma){
 			tempstr[commacounter] = ch;
 			commacounter++;
 		}
