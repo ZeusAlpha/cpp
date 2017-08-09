@@ -1,12 +1,13 @@
 #include <iostream>
-#include <vector>
-#include <map>
+#include <bits/stdc++.h>
+#include <unordered_map>
 #include <string>
 #include <fstream>
 using namespace std;
 //Here the vector named "tokens" contains all the tokens for the lexical analysis which can be used further in compiler design course.
+//Compile it with g++ -std=c++11 lex_v2.cpp
 int main(){
-	map <char,int> m;
+	unordered_map <char,int> m;
 	m['+'] = 0;	m['-'] = 0;	m['*'] = 0;	m['/'] = 0;	m['%'] = 0;	m['&'] = 0;
 	m['!'] = 0;	m['~'] = 0;	m['^'] = 0;	m['='] = 0;	m['#'] = 0;
 	m['{'] = 1;	m['}'] = 1;	m['('] = 1;	m[')'] = 1;	m[';'] = 1;	
@@ -19,7 +20,7 @@ int main(){
 	if(!fin.is_open()){cout << "Error" << endl;return 0;}
 	while(!fin.eof()){
 		ch=fin.get();
-		map <char,int>:: iterator it;
+		unordered_map <char,int>:: iterator it;
 		it = m.find(ch);
 		if(ch=='"'){
 			tempstr[commacounter] = ch;
