@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 using namespace std;
-//Here the vector named "tokens" contains all the tokens for the lexical analysis which can be used further in compiler design.
+//Here the vector named "tokens" contains all the tokens for the lexical analysis which can be used further in compiler design course.
 int main(){
 	map <char,int> m;
 	m['+'] = 0;	m['-'] = 0;	m['*'] = 0;	m['/'] = 0;	m['%'] = 0;	m['&'] = 0;
@@ -56,7 +56,7 @@ int main(){
 			if(ch!='\n' && ch != ' '&&ch!='\t'){			
 				cout<<"["<<ch<<"] ";
 				tokens.push_back(string(1,ch));
-			}
+	        	}
 		}
 	}
 	fin.close();	
