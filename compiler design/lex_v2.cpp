@@ -60,6 +60,13 @@ int main(){
 	        	}
 		}
 	}
-	fin.close();	
+	fin.close();
+	ofstream fout("tokens.txt");
+	int i;
+	for(i=0;i<tokens.size();i++)
+	{
+		fout << tokens[i] << endl;
+	}	
+	fout.close();
 	return 0;
 }
